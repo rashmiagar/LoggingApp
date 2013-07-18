@@ -1,0 +1,42 @@
+ <ul class="nav">
+        <a class="brand" href="/">Insignia</a>
+        <li class="dropdown">
+        <a class="dropdown_toggle" data-toggle="dropdown" href="#">Service<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu" >
+          <li role="presentation"><%= link_to "Add Service", '/admin/addservice' %></li>
+          <li role="presentation"><%= link_to "View Service", '/admin/viewservice' %></li> <!-- '/services/types/list -->
+        </ul>     
+      </li>
+      <li class="dropdown">
+        <a class="dropdown_toggle" data-toggle="dropdown" href="#">Search<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu" >
+          <li role="presentation"><%= link_to "Search Labour", '' %></li>
+          <li role="presentation"><%= link_to "Search Service", '' %></li>
+          <li role="presentation"><%= link_to "Search User", '' %></li>
+        </ul>     
+      </li>
+      <li class="dropdown">
+        <a class="dropdown_toggle" data-toggle="dropdown" href="#">Reports<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu" >
+          <li role="presentation"><%= link_to "All Users", '' %></li>
+          <li role="presentation"><%= link_to "All Services", '' %></li>
+          <li role="presentation"><%= link_to "All Requests", '' %></li>
+          <li role="presentation"><%= link_to "All Labours", '' %></li>
+          <li role="presentation"><%= link_to "All Feedbacks", '' %></li>
+        </ul>     
+      </li>
+      <li class="dropdown">
+        <a class="dropdown_toggle" data-toggle="dropdown" href="#">Labours<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu" >
+          <li role="presentation"><%= link_to "Add Labour", new_labor_path %></li>
+          <li role="presentation"><%= link_to "View Labour", '/labor/show' %></li>
+          <li role="presentation"><%= link_to "Remove Labour", '' %></li>
+          <li role="presentation"><%= link_to "Deactivate Labour", '' %></li>
+        </ul>     
+      </li>
+         </ul>
+      <ul class="nav pull-right">
+        <li style="font-size:16px;font-weight:bold;">Welcome <%= session[:username]  %></li>
+        <li><%= link_to "Change Password", '/admin/change_password' %></li>
+         <li><%= link_to 'Logout', '/login/logout' %> </li>
+      </ul>
